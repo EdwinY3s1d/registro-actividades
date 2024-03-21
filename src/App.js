@@ -1,10 +1,12 @@
+
 import './App.css';
+import React from 'react';
+import RegistroActividadesForm from './components/register'; // 
 
 function App() {
   return (
     <div className="App">
-      <h1> hola </h1> 
-      <h1> buenas </h1> 
+      <RegistroActividadesForm />
     </div>
   );
 }
