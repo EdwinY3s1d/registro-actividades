@@ -12,17 +12,16 @@
 
 + Grupo 15
   + Andrés Díaz
-  + Ewdwin Peña
-  + Roberson Dazza
+  + Edwin Peña
+  + Roberson Daza
   + Diego Romero
 
 ## Páginas disponibles en la aplicación
 
 - En la presente aplicación usted puede acceder:
+  +  Inicio
+  +  Registro de turnos 
 
-### `Index`
-
-- Ejecue la aplicación en modo de desarrollo.\
+- Ejecute la aplicación en modo de desarrollo.\
 - Abra [http://localhost:3000](http://localhost:3000) para verlo en su explorador.
-
-- La página se cargará cuando se efectuen cambios en tiempo real.\
+- La página se cargará automáticamente cuando se efectuen cambios en tiempo real.\
