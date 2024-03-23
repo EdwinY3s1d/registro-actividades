@@ -21,7 +21,7 @@ function RegistroActividadesForm() {
         <h1>Registro de Actividades</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="numeroIdentificacion">Número de identificación:</label>
+            <label htmlFor="numeroIdentificacion">Número de identificación</label>
             <input
               type="text"
               id="numeroIdentificacion"
