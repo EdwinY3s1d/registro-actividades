@@ -1,7 +1,34 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Menu from './menu/menu';
+import Home from '../pages/home';
+import Search from '../pages/search';
+import Register from '../pages/register';
+import Error404 from '../pages/error404';
+import Login from '../pages/login';
+import { Content, Header } from 'antd/es/layout/layout';
+
 function Navigation() {
   return (
-    <h1>Hi there Navigation!</h1>
+    <Router>
+    <Header>
+      <Menu />
+    </Header>
+    <Content>
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/search" element={<Search />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Error404 />} />
+    </Routes>
+    </Content>
+
+  </Router>
     
   );
 }   
 export default Navigation;
+
+
