@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { Form, Input, Button, DatePicker } from 'antd';
 
 function Register() {
     const [formData, setFormData] = useState({
         username: '',
-        email: '',
-        password: '',
         activity: '',
         dateTime: ''
     });
@@ -20,19 +19,22 @@ function Register() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} layout="vertical">
             <h1>Register</h1>
             
-            <label>
-                Activity:
-                <input type="text" name="activity" onChange={handleChange} />
-            </label>
-            <label>
-                Date and Time:
-                <input type="datetime-local" name="dateTime" onChange={handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
+            <Form.Item label="Username" rules={[{ required: true, message: 'Please input your username!' }]}>
+                <Input type="text" name="username" onChange={handleChange} />
+            </Form.Item>
+            <Form.Item label="Activity" rules={[{ required: true, message: 'Please input your activity!' }]}>
+                <Input type="text" name="activity" onChange={handleChange} />
+            </Form.Item>
+            <Form.Item label="Date and Time" rules={[{ required: true, message: 'Please input your date and time!' }]}>
+                <DatePicker showTime onChange={(date, dateString) => setFormData({...formData, dateTime: dateString})} />
+            </Form.Item>
+            <Form.Item>
+                <Button type="primary" htmlType="submit">Register</Button>
+            </Form.Item>
+        </Form>
     );
 }
 

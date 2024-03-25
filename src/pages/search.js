@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, Flex, Tooltip } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 function Search() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -34,7 +36,7 @@ function Search() {
                 Search Term:
                 <input type="text" value={searchTerm} onChange={handleChange} style={inputStyle} />
             </label>
-            <input type="submit" value="Search" style={inputStyle} />
+            <Button shape="circle" icon={<SearchOutlined />} />
         </form>
     );
 }
