@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, DatePicker } from 'antd';
+import './register.css';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -19,22 +19,30 @@ function Register() {
     }
 
     return (
-        <Form onSubmit={handleSubmit} layout="vertical">
-            <h1>Register</h1>
-            
-            <Form.Item label="Username" rules={[{ required: true, message: 'Please input your username!' }]}>
-                <Input type="text" name="username" onChange={handleChange} />
-            </Form.Item>
-            <Form.Item label="Activity" rules={[{ required: true, message: 'Please input your activity!' }]}>
-                <Input type="text" name="activity" onChange={handleChange} />
-            </Form.Item>
-            <Form.Item label="Date and Time" rules={[{ required: true, message: 'Please input your date and time!' }]}>
-                <DatePicker showTime onChange={(date, dateString) => setFormData({...formData, dateTime: dateString})} />
-            </Form.Item>
-            <Form.Item>
-                <Button type="primary" htmlType="submit">Register</Button>
-            </Form.Item>
-        </Form>
+        <div class="cover-container-register d-flex p-3 mx-auto flex-column">
+            <form onSubmit={handleSubmit} class="form-register">
+                <h1>Registrar actividad</h1>
+                
+                <div class="col-md-12 mb-4">
+                    <div class="row">
+                        <div class="col-md-12 mb-6">
+                            <label class="form-label col-12">
+                                Actividad:
+                                <input type="text" name="activity" onChange={handleChange} className="form-control"/>
+                            </label>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label col-12">
+                                Día y Hora:
+                                <input type="datetime-local" name="dateTime" onChange={handleChange} className="form-control" />
+                            </label>
+                        </div>
+                        <button type="submit" className="button-register">Enviar</button>
+                    </div>
+                </div> 
+            </form>
+        </div>
     );
 }
 
