@@ -1,7 +1,5 @@
-
 import './App.css';
-import React from 'react';
-import RegistroActividadesForm from './components/register'; // 
+import Navigation from './components/navigation';
 
 
 
