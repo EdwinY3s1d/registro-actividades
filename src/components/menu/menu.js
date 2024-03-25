@@ -1,18 +1,32 @@
 import React from "react";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { Link } from "react-router-dom";
-
-import './menu.css';
 
 function menu() {
     return (
-        <div className="menu">
-            <div>
-            <Link to="/login">login</Link>
-            <Link to="/register"> register </Link>
-            <Link to="/search"> search </Link>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Uniminuto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Acceso</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/register">Registro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/search">Buscar</a>
+                </li>
+              </ul>
             </div>
         </div>
+    </nav>
+
     );
     }
 
