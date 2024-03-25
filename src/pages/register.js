@@ -4,8 +4,6 @@ import './register.css';
 function Register() {
     const [formData, setFormData] = useState({
         username: '',
-        email: '',
-        password: '',
         activity: '',
         dateTime: ''
     });

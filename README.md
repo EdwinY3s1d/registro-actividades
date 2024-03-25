@@ -22,6 +22,12 @@
   +  Inicio
   +  Registro de turnos 
 
+- Para ejecutar el proyecto en local es necesario instalar :
+  +  antd
+  +  react-router-dom
+
+
 - Ejecute la aplicación en modo de desarrollo.\
 - Abra [http://localhost:3000](http://localhost:3000) para verlo en su explorador.
 - La página se cargará automáticamente cuando se efectuen cambios en tiempo real.\
+
